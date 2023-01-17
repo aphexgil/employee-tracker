@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "CEO",
+    "salary": 500000,
+    "department_id": 1
+  },
+  {
+    "id": 2,
+    "title": "President",
+    "salary": 450000,
+    "department_id": 1
+  },
+  {
+    "id": 3,
+    "title": "CTO",
+    "salary": 450000,
+    "department_id": 1 
+  },
+  {
+    "id": 4,
+    "title": "Lead Developer",
+    "salary": 300000,
+    "department_id": 2
+  },
+  {
+    "id": 5,
+    "title": "Lead Systems Engineer",
+    "salary": 200000,
+    "department_id": 2
+  },
+  {
+    "id": 6,
+    "title": "Full-Stack Engineer",
+    "salary": 140000,
+    "department_id": 2
+  },
+  {
+    "id": 7,
+    "title": "Junior Developer",
+    "salary": 85000,
+    "department_id": 2
+  },
+  {
+    "id": 8,
+    "title": "Head of Marketing",
+    "salary": 250000,
+    "department_id": 3
+  },
+  {
+    "id": 9,
+    "title": "Marketing VP",
+    "salary": 195000,
+    "department_id": 3
+  },
+  {
+    "id": 10,
+    "title": "Brand Manager",
+    "salary": 90000,
+    "department_id": 3
+  },
+  {
+    "id": 11,
+    "title": "Brand Ambassador",
+    "salary": 75000,
+    "department_id": 3
+  }
+]

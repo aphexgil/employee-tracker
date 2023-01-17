@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "first_name": "Alan",
+    "last_name": "Johnson",
+    "role_id": 1,
+    "manager_id": null
+  },
+  {
+    "id": 2,
+    "first_name": "Jeff",
+    "last_name": "Heaney",
+    "role_id": 2,
+    "manager_id": 1
+  },
+  {
+    "id": 3,
+    "first_name": "Dobby",
+    "last_name": "Suttie",
+    "role_id": 3,
+    "manager_id": 1
+  },
+  {
+    "id": 4,
+    "first_name": "Gerard",
+    "last_name": "Matthew",
+    "role_id": 4,
+    "manager_id": 3
+  },
+  {
+    "id": 5,
+    "first_name": "Super",
+    "last_name": "Hans",
+    "role_id": 5,
+    "manager_id": 3
+  },
+  {
+    "id": 6,
+    "first_name": "Mark",
+    "last_name": "Corrigan",
+    "role_id": 6,
+    "manager_id": 5
+  },
+  {
+    "id": 7,
+    "first_name": "Jeremy",
+    "last_name": "Usborne",
+    "role_id": 7,
+    "manager_id": 4
+  },
+  {
+    "id": 8,
+    "first_name": "April",
+    "last_name": "Danecroft",
+    "role_id": 7,
+    "manager_id": 4
+  },
+  {
+    "id": 9,
+    "first_name": "Big",
+    "last_name": "Suze",
+    "role_id": 9,
+    "manager_id": 2
+  },
+  {
+    "id": 10,
+    "first_name": "Sophie",
+    "last_name": "Chapman",
+    "role_id": 10,
+    "manager_id": 9
+  },
+  {
+    "id": 11,
+    "first_name": "Big Mad",
+    "last_name": "Andy",
+    "role_id": 10,
+    "manager_id": 9
+  },
+  {
+    "id": 12,
+    "first_name": "Sarah",
+    "last_name": "Corrigan",
+    "role_id": 11,
+    "manager_id": 10
+  },
+  {
+    "id": 13,
+    "first_name": "Zahara",
+    "last_name": "Beeput",
+    "role_id": 11,
+    "manager_id": 10
+  },
+  {
+    "id": 14,
+    "first_name": "Toni",
+    "last_name": "Marmur",
+    "role_id": 11,
+    "manager_id": 11
+  },
+  {
+    "id": 15,
+    "first_name": "Elena",
+    "last_name": "Filatova",
+    "role_id": 11,
+    "manager_id": 11
+  }
+]
