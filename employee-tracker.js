@@ -1,11 +1,9 @@
 const axios = require('axios');
 const inquirer = require('inquirer');
 const cTable = require('console.table');
-const uniqid = require('uniqid');
 const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
-const { existsSync } = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -446,4 +444,3 @@ async function init(){
 }
 
 init();
-console.log('C');
