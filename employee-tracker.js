@@ -184,6 +184,71 @@ async function updateEmployeeRole(){
   
 }
 
+//UPDATE EMPLOYEE MANAGER
+async function updateEmployeeManager(){
+
+  const employees = await axios.get('http://localhost:3001/api/employee/')
+    .then(function(response) {
+      return response.data;
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
+
+  const employee_names = employees.map( employee => employee.first_name + " " + employee.last_name );
+
+  const managers = await axios.get('http://localhost:3001/api/employee/')
+    .then(function(response) {
+      return response.data;
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
+
+  const  manager_names = managers.map( manager => manager.first_name + " " + manager.last_name );
+
+  const resp = await inquirer.prompt([
+    {
+      type: 'list',
+      message: `Which employee would you like to update?`,
+      name: 'employee',
+      choices: employee_names
+    }
+  ]);
+
+
+  manager_names.splice(manager_names.indexOf(resp.employee), 1);
+
+  manager_names.push('None');
+
+  const resp2 = await inquirer.prompt([
+    {
+      type: 'list',
+      message: `Who is the employee's new manager?`,
+      name: 'manager',
+      choices: manager_names
+    }
+  ]);
+
+  const employee = employees.filter( employee => { return  employee.first_name + " " + employee.last_name === resp.employee})[0];
+
+  let newManager = null;
+  if(resp2.manager != 'None'){
+    const manager = managers.filter( manager => { return manager.first_name + " " + manager.last_name === resp2.manager })[0];
+    newManager = manager.id;
+  }
+
+
+  const employeeData = await axios.put('http://localhost:3001/api/employee/'+employee.id,
+  {
+    first_name: employee.first_name,
+    last_name: employee.last_name,
+    manager_id: newManager,
+    role_id: employee.role_id
+  });
+  
+}
+
 //VIEW ROLES
 async function viewRoles(){
 
@@ -331,6 +396,7 @@ async function init(){
               'View All Employees',
               'Add Employee',
               'Update Employee Role',
+              'Update Employee Manager',
               'View All Roles',
               'Add Role',
               'View All Departments',
@@ -354,6 +420,9 @@ async function init(){
         break;
       case 'Update Employee Role':
         await updateEmployeeRole();
+        break;
+      case 'Update Employee Manager':
+        await updateEmployeeManager();
         break;
       case 'View All Roles':
         await viewRoles();
